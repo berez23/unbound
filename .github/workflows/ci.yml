@@ -18,7 +18,7 @@ jobs:
     - name : add      ldflag
       run: ldflag="-ldl -all-static"
     - name: configue enable-fully-static
-      run: ./configure  --enable-fully-static 
+      run: ./configure  --enable-fully-static --disable-flto --disable-shared
     - name: make
       run: make
     - name: make test
