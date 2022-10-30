@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: configure --enable-fully-static
-      run: ./configure --enable-debug
+      run: ./configure  --enable-fully-static
     - name: make
       run: make
     - name: make test
@@ -23,7 +23,7 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v3
       with: 
-         name: my-artifact
+         name: unbound
          path: unbound 
          retention-days: 20 
 
