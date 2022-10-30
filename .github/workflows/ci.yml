@@ -13,8 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: configure --enable-fully-static
-      run: ./configure  --enable-fully-static
+    - name: add cflag 
+      run: cflag=". -O2 -flto -pthread -static"
+    - name : add      ldflag
+      run: ldflag="-ldl -all-static"
+    - name: configue enable-fully-static
+      run: ./configure  --enable-fully-static 
     - name: make
       run: make
     - name: make test
