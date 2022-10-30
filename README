@@ -7,4 +7,4 @@ Unbound README
 * More detailed README, README.svn, README.tests in doc directory
 * manual pages can be found in doc directory, and are installed, unbound(8).
 * example configuration file doc/example.conf
-
+  ## add link statically 
