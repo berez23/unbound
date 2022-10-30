@@ -19,8 +19,6 @@ jobs:
       run: make
     - name: make test
       run: make test
-    - name: install
-      run: make install 
       
     - name: Upload
       uses: actions/upload-artifact@v3
